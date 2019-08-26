@@ -1,67 +1,55 @@
 @charset "UTF-8";
-/*
-#wrapper{
-  width: 1170px;
-  margin: 0 auto;
-}
 
-#img{
-  width: 100%;
-}
-
-.logo{
-  width: 20%;
-  float: left;
-}
-
-.menu-item{
-  width: 75%;
-}
-
-.menu-item ul{
-  float: right;
-  list-style: none;
-}
-
-.menu-area{
-  overflow: hidden;
-}
-
-.menu-area ul li{
-  display: inline-block;
-}
-
-.menu-area ul li a{
-  display: inline-block;
-  padding: 10px 15px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-}
-*/
-.divOutter{
+.divOutter {
 	position: relative;
 }
 
-.divInner{
+.divInner {
 	top: 0px;
 	width: 100%;
 	position: absolute;
 }
 
-.imgDesgin{
+.imgDesgin {
 	width: auto;
 	max-height: 50%;
 }
+
 .myContainer {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: auto;
-  max-height: 100%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+	max-height: 100%;
 }
+
 html, body {
-            height: 100%;
-            margin: 0;
-        }
+	height: 100%;
+	margin: 0;
+}
+
+.carousel-caption {
+	position: absolute;
+	right: 15%;
+	bottom: 20px;
+	left: 15%;
+	z-index: 10;
+	padding-top: 20px;
+	padding-bottom: 600px;
+	color: #fff;
+	text-align: center;
+}
+
+li {
+	text-align: right; 
+}
+
+.navBarTop{
+	min-height: 100px;
+	background-image: url("images/PS-banner.jpg");
+}
+
+.col-4 {
+    min-height: 700px;
+}
