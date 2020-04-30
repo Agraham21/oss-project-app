@@ -53,3 +53,19 @@ li {
 .col-4 {
     min-height: 700px;
 }
+
+.topDiv{
+	min-width:100%;
+	text-align:center;
+}
+
+.bottomDiv{
+	margin-left:10%;
+	margin-right:10%;
+	min-width:80%;
+}
+
+.postButton{
+	min-width:100%;
+	min-height:37px;
+}
