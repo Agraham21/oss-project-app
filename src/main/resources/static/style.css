@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	min-height: 100%;
+}
+
 .divOutter {
 	position: relative;
 }
@@ -7,7 +14,6 @@
 .divInner {
 	top: 0px;
 	width: 100%;
-	position: absolute;
 }
 
 .imgDesgin {
