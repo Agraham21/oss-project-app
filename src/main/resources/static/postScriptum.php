@@ -2,6 +2,7 @@
 <html>
 
 <?php include 'design/header.php'; ?>
+<?php include 'config/db_credentials.php'; ?>
 
 <body>
 
@@ -25,7 +26,41 @@
 <div class="flex-container">
 
 	<div id="container1">
-	I am container one
+	<?php
+
+  // Create connection
+  $conn = mysqli_connect($hostname, $username, $password, $database);
+
+  // Check connection was created successfully
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+  // Create a query
+  $query = 'SELECT event_title, event_lore, event_plan FROM event_info;';
+
+  // Prepare Query
+  $preparedStatement = mysqli_prepare($conn, $query);
+
+  // Execute the query
+  mysqli_stmt_execute($preparedStatement);
+
+  // Save the result set
+  $result = mysqli_stmt_get_result($preparedStatement);
+
+  // Loop through the available rows and output
+  ?>
+
+  <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+    <hr>
+    <h1><?php echo $row['event_title']; ?></h1>
+    <h2>Event Plan</h2>
+    <?php echo $row['event_plan']; ?>
+    <h2>Event Lore</h2>
+    <?php echo $row['event_lore']; ?>
+    
+  <?php } ?>
+
 	</div>
 
 	<div id="container2">
