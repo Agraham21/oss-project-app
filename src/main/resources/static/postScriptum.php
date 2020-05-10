@@ -26,6 +26,14 @@
 <div class="flex-container">
 
 	<div id="container1">
+
+  <form id="myForm" method="POST" action="inc/postEvent.php">
+  Event Title: <input name="eventTitle" type="text">
+  Event Plan: <input name= "eventPlan" type="text">
+  Event Lore: <input name="eventLore" type="text">
+  <input type="submit">
+  </form>
+
 	<?php
 
   // Create connection
@@ -60,6 +68,14 @@
     <?php echo $row['event_lore']; ?>
     
   <?php } ?>
+
+  <?php
+  // Close statement
+  mysqli_stmt_close($preparedStatement);
+    
+  // Close Connection
+  mysqli_close($conn);
+  ?>
 
 	</div>
 
