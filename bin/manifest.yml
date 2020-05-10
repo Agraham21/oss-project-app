@@ -1,11 +1,8 @@
 ---
 applications:
 - name: oss-project-app
-  memory: 500MB
+  memory: 750M
   instances: 1
   path: target/oss-project-app-0.0.1-SNAPSHOT.jar
-  buildpacks: 
-  - php 4.4.14
-  random-route: true
-  services:
-    - MySQL
+ # services:
+ #   - sendgrid
