@@ -34,6 +34,10 @@
   <input type="submit">
   </form>
 
+  <form method="POST" action="inc/deleteEvents.php">
+  <input type="submit" value="Delete All Events">
+  </form>
+
 	<?php
 
   // Create connection
